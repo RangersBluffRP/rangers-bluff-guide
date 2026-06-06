@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangers Bluff RP — Server Guide</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', serif;
+    background: #1a1208;
+    color: #e8d9b0;
+    line-height: 1.7;
+  }
+  .hero {
+    background: linear-gradient(135deg, #2c1a08 0%, #1a1208 60%, #0d0a04 100%);
+    border-bottom: 3px solid #8b6914;
+    padding: 48px 24px 36px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.8em;
+    color: #d4a843;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .hero .subtitle {
+    color: #a08840;
+    font-style: italic;
+    font-size: 1.1em;
+  }
+  .hero .updated {
+    margin-top: 12px;
+    font-size: 0.85em;
+    color: #6a5a30;
+  }
+  nav {
+    background: #120d04;
+    border-bottom: 1px solid #3a2a10;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+  nav a {
+    color: #c8a840;
+    text-decoration: none;
+    padding: 12px 16px;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #2a1e08;
+    transition: background 0.2s, color 0.2s;
+  }
+  nav a:hover { background: #2a1e08; color: #f0d060; }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  h1.section { font-size: 2em; color: #d4a843; border-bottom: 2px solid #8b6914; padding-bottom: 10px; margin: 48px 0 20px; }
+  h2 { font-size: 1.4em; color: #c8a840; margin: 32px 0 12px; padding-left: 12px; border-left: 3px solid #8b6914; }
+  h3 { font-size: 1.1em; color: #b09030; margin: 24px 0 8px; }
+  p { margin-bottom: 14px; color: #d8c898; }
+  ul, ol { margin: 0 0 16px 28px; color: #d8c898; }
+  li { margin-bottom: 6px; }
+  strong { color: #e8d060; }
+  em { color: #a08840; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 0.92em;
+  }
+  th {
+    background: #2a1e08;
+    color: #d4a843;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid #3a2a10;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 9px 14px;
+    border: 1px solid #2a1e08;
+    color: #d0c090;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #1e1508; }
+  tr:hover td { background: #251c0a; }
+  code {
+    background: #0d0a04;
+    color: #d4a843;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    border: 1px solid #3a2a10;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.78em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .badge-live { background: #1a4a1a; color: #60c060; border: 1px solid #2a6a2a; }
+  .badge-planned { background: #3a2a08; color: #c0a040; border: 1px solid #5a4010; }
+  .callout {
+    background: #1e1508;
+    border-left: 4px solid #8b6914;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout p { margin: 0; }
+  footer {
+    background: #120d04;
+    border-top: 2px solid #3a2a10;
+    text-align: center;
+    padding: 24px;
+    color: #6a5a30;
+    font-size: 0.85em;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>⚔ Rangers Bluff RP</h1>
+  <div class="subtitle">Server Guide & Player Reference</div>
+  <div class="updated">Last updated: June 2026</div>
+</div>
+
+<nav>
+  <a href="#principles">Principles</a>
+  <a href="#professions">Professions</a>
+  <a href="#skills">Skills</a>
+  <a href="#economy">Economy</a>
+  <a href="#crafting">Crafting</a>
+  <a href="#bounties">Bounties</a>
+  <a href="#properties">Properties</a>
+  <a href="#horses">Horses</a>
+  <a href="#vendors">Vendors</a>
+  <a href="#commands">Commands</a>
+  <a href="#admin">Admin</a>
+  <a href="#planned">Planned</a>
+</nav>
+
+<div class="container">
+
+<!-- GUIDING PRINCIPLES -->
+<h1 class="section" id="principles">Guiding Principles</h1>
+<p>Rangers Bluff RP is a <strong>frontier economy roleplay server</strong> built on the idea that a frontier town only works when people depend on each other. There are no NPCs selling you the best gear. There are no easy shortcuts to power. Everything of real value — weapons, supplies, horse care, information, reputation — flows through player hands.</p>
+<p>The server is inspired by <strong>Bandera RP</strong>, built and run by <strong>Adabelle and Terri Corn</strong>. Bandera set a standard for what a RedM RP server could feel like: slow-paced, community-driven, economically interconnected, where your character's reputation and skills actually meant something over time. That server is gone now, but the soul of it — a world where a blacksmith, a bounty hunter, a rancher, and a cook all need each other — is what Rangers Bluff is trying to carry forward.</p>
+<p>The server is <strong>not a combat server</strong>. PvP exists and has consequences, but it is a tool for roleplay — not the point of the game.</p>
+<h2>Core Design Beliefs</h2>
+<ul>
+  <li><strong>Skill means something.</strong> You earn your profession. No one starts as a master. A Level 5 blacksmith has genuinely spent time at the forge.</li>
+  <li><strong>The economy is player-run.</strong> There are no NPC shops selling iron ingots or ammunition. Resources come from the land. Goods come from players. Prices are set by the market.</li>
+  <li><strong>Offline presence matters.</strong> Your vendor NPC stands in the world selling your goods even when you are logged off. Your horse earns scarcity value over time. Your property holds your place in town.</li>
+  <li><strong>Reputation follows you.</strong> Kill too many people and a bounty grows on your head. Word travels. The sheriff posts your name. Other players can sell you out or hunt you down.</li>
+  <li><strong>No handholding.</strong> The world does not explain itself. Ask around, join the community, figure it out.</li>
+</ul>
+<h2>Look and Feel</h2>
+<p>The server runs three active towns — <strong>Valentine</strong>, <strong>Rhodes</strong>, and <strong>Strawberry</strong> — each with a full set of crafting stations, stable services, sheriff, information broker, and player vendor support. Additional towns (Saint Denis, Annesburg, Blackwater) are in development.</p>
+<p>NPCs are sparse and purposeful. There is no quest marker telling you where to go. The sheriff posts a wanted list. The information broker sells leads. Everything else is between players.</p>
+
+<!-- PROFESSIONS -->
+<h1 class="section" id="professions">Professions</h1>
+<h2>What a Profession Is</h2>
+<p>A profession is your character's primary economic identity. Professions create interdependence — a blacksmith needs a miner for ore, a cook needs a farmer for ingredients, a horse trainer needs riders who want trained horses. No one is self-sufficient, and that is intentional.</p>
+
+<h2>Phase 1 — Open Access <span class="badge badge-live">CURRENT</span></h2>
+<p><strong>All 12 professions are currently open to all players.</strong> Any character can level any skill by doing the associated activity. This phase continues until the server reaches a critical mass of active players.</p>
+<table>
+  <tr><th>Category</th><th>Professions</th></tr>
+  <tr><td><strong>Land &amp; Gathering</strong></td><td>Mining, Farming, Hunting, Tracking</td></tr>
+  <tr><td><strong>Crafting</strong></td><td>Blacksmithing, Gunsmithing, Tanning, Tailoring</td></tr>
+  <tr><td><strong>Trade &amp; Living</strong></td><td>Cooking, Brewing, Trading, Horse Training</td></tr>
+</table>
+
+<h2>Phase 2 — Single Profession <span class="badge badge-planned">PLANNED</span></h2>
+<p>Once the player base reaches critical mass, the server transitions to a <strong>one-profession-per-character</strong> system:</p>
+<ul>
+  <li>Each player chooses <strong>one primary profession</strong></li>
+  <li>You may switch profession <strong>once per calendar month</strong></li>
+  <li>Your old skill XP is preserved when switching</li>
+</ul>
+<div class="callout"><p><strong>Ratio-controlled availability.</strong> If too many blacksmiths exist, that profession locks for new selection until the ratio normalizes. The game shows which professions are available and what the caps are. A town needs one or two smiths, not twenty.</p></div>
+
+<!-- SKILLS -->
+<h1 class="section" id="skills">Skills System <span class="badge badge-live">LIVE</span></h1>
+<p>Every character has <strong>12 skills</strong>, each from <strong>Level 1 to Level 5</strong>. Skills advance by doing the activity — there are no skill books or shortcuts. Each level unlocks new recipes, access, or multipliers.</p>
+<table>
+  <tr><th>Group</th><th>Skills</th></tr>
+  <tr><td><strong>Land &amp; Gathering</strong></td><td>Mining, Farming, Hunting, Tracking</td></tr>
+  <tr><td><strong>Crafting</strong></td><td>Blacksmithing, Gunsmithing, Tanning, Tailoring</td></tr>
+  <tr><td><strong>Trade &amp; Living</strong></td><td>Cooking, Brewing, Trading, Horse Training</td></tr>
+</table>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/skills</code></td><td>Show skill group shortcuts</td></tr>
+  <tr><td><code>/skills land</code></td><td>View Land &amp; Gathering skills</td></tr>
+  <tr><td><code>/skills crafting</code></td><td>View Crafting skills</td></tr>
+  <tr><td><code>/skills trade</code></td><td>View Trade &amp; Living skills</td></tr>
+  <tr><td><code>/skills [name]</code></td><td>View a single skill — partial match works (e.g. <code>/skills horse</code>)</td></tr>
+  <tr><td><code>/skillinfo [name]</code></td><td>View all five level thresholds and unlock descriptions</td></tr>
+</table>
+<p><em>Example messages: "Skills — Blacksmithing: Lvl 2 — 318/600 pts (53%)" / "★ Blacksmithing reached Level 3! Unlocked: Refined hardware and fittings"</em></p>
+
+<!-- ECONOMY -->
+<h1 class="section" id="economy">Economy &amp; Banking <span class="badge badge-live">LIVE</span></h1>
+<table>
+  <tr><th>Currency</th><th>Description</th></tr>
+  <tr><td><strong>Cash</strong></td><td>On-hand money. Used for most transactions.</td></tr>
+  <tr><td><strong>Bank Balance</strong></td><td>Safe storage. Use /deposit and /withdraw at any time.</td></tr>
+  <tr><td><strong>Gold</strong></td><td>Premium currency for rare transactions.</td></tr>
+  <tr><td><strong>Marked Bills</strong></td><td>Dirty money from criminal activity.</td></tr>
+</table>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/balance</code></td><td>Show all four balances: cash, bank, gold, marked bills</td></tr>
+  <tr><td><code>/deposit [amount]</code></td><td>Move cash into your bank account</td></tr>
+  <tr><td><code>/withdraw [amount]</code></td><td>Move bank balance to cash on hand</td></tr>
+</table>
+
+<!-- CRAFTING -->
+<h1 class="section" id="crafting">Crafting <span class="badge badge-live">LIVE</span></h1>
+<p>Crafting stations are fixed locations in each town. Approach the station until the <strong>G prompt</strong> appears, then hold G to open the crafting menu. You cannot craft above your current skill level. Ingredients are consumed when you begin.</p>
+<table>
+  <tr><th>Station</th><th>Valentine</th><th>Rhodes</th><th>Strawberry</th></tr>
+  <tr><td>Blacksmith Forge</td><td>✅</td><td>✅</td><td>✅</td></tr>
+  <tr><td>Gunsmith Bench</td><td>✅</td><td>✅</td><td>✅</td></tr>
+  <tr><td>Cooking Fire</td><td>✅</td><td>✅</td><td>✅</td></tr>
+  <tr><td>Stable Workbench</td><td>✅</td><td>✅</td><td>✅</td></tr>
+</table>
+
+<!-- BOUNTIES -->
+<h1 class="section" id="bounties">Bounties &amp; Contracts <span class="badge badge-live">LIVE</span></h1>
+<p>When a player kills another player, a kill is registered and a bounty accumulates. Kill enough people and you become <strong>Highly Dangerous</strong> — the most valuable target on the board. Names are gated behind the information broker and cost money to reveal.</p>
+<h2>Town NPCs</h2>
+<ul>
+  <li><strong>Sheriff NPC</strong> (every active town) — Walk up, hold G for 1 second. Shows the full Wanted List with names, kill counts, and reward amounts.</li>
+  <li><strong>Information Broker</strong> (marked with ? on minimap) — Walk up, hold G. Sells leads that reveal the name behind a bounty entry for a flat fee.</li>
+</ul>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/bountyboard</code></td><td>View all active bounties — heat level, kill count, reward — no names revealed</td></tr>
+  <tr><td><code>/mybounty</code></td><td>Check if you have an active bounty on your head</td></tr>
+  <tr><td><code>/collectbounty [playerid]</code></td><td>Collect a reward after killing a wanted player</td></tr>
+  <tr><td><code>/placecontract [playerid] [amount]</code></td><td>Pay to put a kill contract on a specific player</td></tr>
+  <tr><td><code>/opencontracts</code></td><td>List all open kill contracts available to accept</td></tr>
+  <tr><td><code>/acceptcontract [contract_id]</code></td><td>Accept a kill contract and become the assigned hunter</td></tr>
+  <tr><td><code>/mycontracts</code></td><td>Cryptic check — tells you if someone has a contract on you</td></tr>
+</table>
+
+<!-- PROPERTIES -->
+<h1 class="section" id="properties">Properties <span class="badge badge-live">LIVE</span></h1>
+<p>Properties are rentable locations — homes, offices, storage rooms — across the towns. Miss your rent due date and you have <strong>7 days</strong> to pay before the property is automatically repossessed and all keys revoked. You can prepay up to 3 months in advance.</p>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/properties [town]</code></td><td>List available properties, optionally filtered by town</td></tr>
+  <tr><td><code>/myproperties</code></td><td>List properties you own, with rent status</td></tr>
+  <tr><td><code>/rentproperty [id]</code></td><td>Rent an available property — first month deducted immediately</td></tr>
+  <tr><td><code>/prepayrent [ownership_id] [months]</code></td><td>Prepay up to 3 months ahead</td></tr>
+  <tr><td><code>/vacateproperty [ownership_id]</code></td><td>Give up a property voluntarily</td></tr>
+  <tr><td><code>/grantkey [playerid] [ownership_id]</code></td><td>Give another player a key to your property</td></tr>
+  <tr><td><code>/revokekey [playerid] [ownership_id]</code></td><td>Revoke a player's key</td></tr>
+  <tr><td><code>/haskey [ownership_id]</code></td><td>Check if you have access to a property</td></tr>
+</table>
+
+<!-- HORSES -->
+<h1 class="section" id="horses">Stables &amp; Horse Training <span class="badge badge-live">LIVE</span></h1>
+<p>Approach a <strong>Stable NPC</strong> and hold <strong>G</strong> to open the stable menu. Buy horses, switch your active horse, and access stable services. Press <strong>H</strong> to call your active horse.</p>
+
+<h2>Horse Tiers</h2>
+<table>
+  <tr><th>Tier</th><th>Horse Training Skill Required</th><th>Example Breeds</th><th>Price Range</th></tr>
+  <tr><td>Low</td><td>Level 1 (any player)</td><td>Morgan, Kladruber, Mule</td><td>$40–$100</td></tr>
+  <tr><td>Mid</td><td>Level 2</td><td>Standardbred, Breton, Kentucky Saddle, Tennessee Walker</td><td>$280–$320</td></tr>
+  <tr><td>High</td><td>Level 4</td><td>Missouri Fox Trotter, Shire, Turkoman</td><td>$900–$1,500</td></tr>
+</table>
+
+<h2>The Two Layers of Horse Training</h2>
+<ol>
+  <li><strong>Horse Training skill</strong> — any player's ability to care for and bond with horses through daily activity (live now)</li>
+  <li><strong>Horse Trainer profession</strong> — a gated profession (Phase 2) that unlocks the ability to push horses to their highest potential</li>
+</ol>
+
+<h2>Bond Levels</h2>
+<table>
+  <tr><th>Bond Level</th><th>XP Required</th><th>Status</th></tr>
+  <tr><td>1 — Acquainted</td><td>0</td><td>Any player</td></tr>
+  <tr><td>2 — Familiar</td><td>200</td><td>Any player</td></tr>
+  <tr><td>3 — Bonded</td><td>600</td><td>Any player</td></tr>
+  <tr><td>4</td><td>1,500</td><td><span class="badge badge-planned">Requires professional trainer</span></td></tr>
+  <tr><td>5</td><td>3,000</td><td><span class="badge badge-planned">Requires professional trainer</span></td></tr>
+</table>
+
+<h2>Bond XP Sources</h2>
+<table>
+  <tr><th>Activity</th><th>XP Awarded</th><th>Notes</th></tr>
+  <tr><td>Riding</td><td>2 pts per 500m</td><td>Ground travel only, no teleport</td></tr>
+  <tr><td>Jumping</td><td>3 / 5 / 8 pts</td><td>Based on airtime: short / medium / long</td></tr>
+  <tr><td>Grooming (<code>/groom</code>)</td><td>5 pts</td><td>5-minute cooldown per horse</td></tr>
+  <tr><td>Feeding (<code>/feedhorse</code>)</td><td>2 pts</td><td>1-minute cooldown per horse</td></tr>
+</table>
+
+<h2>Horse Training Skill Multiplier</h2>
+<table>
+  <tr><th>Skill Level</th><th>Bond XP Multiplier</th></tr>
+  <tr><td>1</td><td>1.0× (base)</td></tr>
+  <tr><td>2</td><td>1.5×</td></tr>
+  <tr><td>3</td><td>2.0×</td></tr>
+  <tr><td>4</td><td>2.5×</td></tr>
+  <tr><td>5</td><td>3.0×</td></tr>
+</table>
+
+<h2>Scarcity Buffs <span class="badge badge-live">LIVE</span></h2>
+<p>The rarer a breed is across the server, the stronger its passive buffs. A breed owned by only one player gets the maximum buff. Common breeds get none. Buffs apply automatically when you mount — no action needed.</p>
+<ul>
+  <li><strong>Speed buff</strong> — applied as a move rate multiplier while mounted</li>
+  <li><strong>Stamina buff</strong> — maintains a minimum stamina floor so the horse tires slower</li>
+</ul>
+
+<h2>Horse Trainer Profession <span class="badge badge-planned">PLANNED — Phase 2</span></h2>
+<p>Bond Levels 4 and 5 require a <strong>professional trainer</strong> to unlock. Once a trainer unlocks higher bond levels, the horse <strong>retains that training when sold</strong> to another player — making high-bond horses a premium tradeable asset. Trainers sell their services as a profession.</p>
+
+<h2>Player-to-Horse Bond Skill <span class="badge badge-planned">PLANNED</span></h2>
+<p>A separate skill tracking a player's general bond with their horses. Provides behavioral buffs:</p>
+<ul>
+  <li><strong>Reduced skittishness</strong> — horse reacts less to gunfire, wildlife, and crowds</li>
+  <li><strong>Trick commands</strong> — trigger horse animations (rear, bow, lie down)</li>
+</ul>
+
+<h2>Horse Commands</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/groom</code></td><td>Groom your active mount — awards bond XP, 5-minute cooldown</td></tr>
+  <tr><td><code>/feedhorse [item]</code></td><td>Feed your horse an item from inventory — awards bond XP</td></tr>
+  <tr><td><code>/horsebond</code></td><td>Check bond XP and level of your active horse</td></tr>
+</table>
+
+<!-- VENDORS -->
+<h1 class="section" id="vendors">Player Vendors <span class="badge badge-live">LIVE</span></h1>
+<p>Every player can place <strong>one vendor NPC</strong> anywhere in the world. Your vendor stands and sells whatever you have stocked — even when you are offline. Money accumulates in your vendor's earnings until you collect it.</p>
+
+<h2>Placement Rules</h2>
+<ul>
+  <li>At least <strong>15 meters</strong> from any other player's vendor</li>
+  <li>At least <strong>8 meters</strong> from crafting stations, stable NPCs, and town NPCs</li>
+  <li>One vendor per player — pick it up first before placing elsewhere</li>
+</ul>
+
+<h2>Vendor Types</h2>
+<table>
+  <tr><th>Type Code</th><th>NPC Appearance</th></tr>
+  <tr><td><code>blacksmith_vendor</code></td><td>Blacksmith</td></tr>
+  <tr><td><code>gunsmith_vendor</code></td><td>Gunsmith</td></tr>
+  <tr><td><code>general_store</code></td><td>Merchant</td></tr>
+  <tr><td><code>stable_merchant</code></td><td>Stablehand</td></tr>
+  <tr><td><code>trader</code></td><td>Generic Trader (default)</td></tr>
+</table>
+
+<h2>Vendor Commands</h2>
+<table>
+  <tr><th>Command</th><th>Who</th><th>What</th></tr>
+  <tr><td><code>/placevendor [type]</code></td><td>Owner</td><td>Place vendor NPC at current position</td></tr>
+  <tr><td><code>/pickupvendor</code></td><td>Owner</td><td>Remove NPC from world — stock and earnings preserved</td></tr>
+  <tr><td><code>/removevendor</code></td><td>Owner</td><td>Permanently delete vendor — stock returned, earnings paid out</td></tr>
+  <tr><td><code>/vstock [code] [qty] [price]</code></td><td>Owner, near NPC</td><td>Add items from inventory to vendor (max 1,000 per slot)</td></tr>
+  <tr><td><code>/vunstock [code] [qty]</code></td><td>Owner</td><td>Pull items back from vendor to inventory</td></tr>
+  <tr><td>Hold G near vendor NPC</td><td>Buyers</td><td>Browse and buy from the vendor</td></tr>
+  <tr><td>Hold G near your own NPC</td><td>Owner</td><td>Owner menu: collect earnings, pick up, remove</td></tr>
+</table>
+
+<!-- COMMANDS -->
+<h1 class="section" id="commands">Complete Command Reference</h1>
+
+<h2>Economy</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/balance</code></td><td>Show cash, bank, gold, and marked bills</td></tr>
+  <tr><td><code>/deposit [amount]</code></td><td>Move cash to bank</td></tr>
+  <tr><td><code>/withdraw [amount]</code></td><td>Move bank balance to cash</td></tr>
+</table>
+
+<h2>Skills</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/skills</code></td><td>Show skill group shortcuts</td></tr>
+  <tr><td><code>/skills land</code></td><td>View Land &amp; Gathering skills</td></tr>
+  <tr><td><code>/skills crafting</code></td><td>View Crafting skills</td></tr>
+  <tr><td><code>/skills trade</code></td><td>View Trade &amp; Living skills</td></tr>
+  <tr><td><code>/skills [name]</code></td><td>View a single skill (partial match)</td></tr>
+  <tr><td><code>/skillinfo [name]</code></td><td>View all level thresholds and unlocks</td></tr>
+</table>
+
+<h2>Horses</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/groom</code></td><td>Groom your active horse — awards bond XP</td></tr>
+  <tr><td><code>/feedhorse [item]</code></td><td>Feed your horse — awards bond XP</td></tr>
+  <tr><td><code>/horsebond</code></td><td>Check bond XP and level of your active horse</td></tr>
+</table>
+
+<h2>Bounties &amp; Contracts</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/bountyboard</code></td><td>View active bounties anonymously</td></tr>
+  <tr><td><code>/mybounty</code></td><td>Check if you have an active bounty</td></tr>
+  <tr><td><code>/collectbounty [playerid]</code></td><td>Collect reward after killing a wanted player</td></tr>
+  <tr><td><code>/placecontract [playerid] [amount]</code></td><td>Put a kill contract on a player</td></tr>
+  <tr><td><code>/opencontracts</code></td><td>List open kill contracts you can accept</td></tr>
+  <tr><td><code>/acceptcontract [contract_id]</code></td><td>Accept a kill contract</td></tr>
+  <tr><td><code>/mycontracts</code></td><td>Check if someone has a contract on you (cryptic)</td></tr>
+</table>
+
+<h2>Properties</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/properties [town]</code></td><td>List available properties</td></tr>
+  <tr><td><code>/myproperties</code></td><td>List your owned properties and rent status</td></tr>
+  <tr><td><code>/rentproperty [id]</code></td><td>Rent a property</td></tr>
+  <tr><td><code>/prepayrent [ownership_id] [months]</code></td><td>Prepay up to 3 months</td></tr>
+  <tr><td><code>/vacateproperty [ownership_id]</code></td><td>Give up a property</td></tr>
+  <tr><td><code>/grantkey [playerid] [ownership_id]</code></td><td>Give someone a key</td></tr>
+  <tr><td><code>/revokekey [playerid] [ownership_id]</code></td><td>Revoke someone's key</td></tr>
+  <tr><td><code>/haskey [ownership_id]</code></td><td>Check if you have access to a property</td></tr>
+</table>
+
+<h2>Player Vendors</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>/placevendor [type]</code></td><td>Place vendor NPC at your current position</td></tr>
+  <tr><td><code>/pickupvendor</code></td><td>Remove vendor NPC (keeps stock and earnings)</td></tr>
+  <tr><td><code>/removevendor</code></td><td>Permanently delete your vendor</td></tr>
+  <tr><td><code>/vstock [code] [qty] [price]</code></td><td>Stock your vendor from your inventory</td></tr>
+  <tr><td><code>/vunstock [code] [qty]</code></td><td>Pull items from vendor back to inventory</td></tr>
+</table>
+
+<!-- ADMIN -->
+<h1 class="section" id="admin">Debug &amp; Admin Commands</h1>
+
+<h2>Client / F8 Console</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>mycoords</code></td><td>Print your X, Y, Z, heading to F8 console</td></tr>
+  <tr><td><code>tpto [x] [y] [z]</code></td><td>Teleport to coordinates</td></tr>
+  <tr><td><code>goto [town]</code></td><td>Teleport to a town (valentine, rhodes, blackwater, saintdenis, strawberry, annesburg)</td></tr>
+  <tr><td><code>testnpcmodel [name]</code></td><td>Spawn a test NPC at your feet to preview a model</td></tr>
+  <tr><td><code>cleannpcs</code></td><td>Delete all non-player peds within 20 meters</td></tr>
+  <tr><td><code>nudgenpc [amount]</code></td><td>Move the nearest NPC up or down on Z axis</td></tr>
+  <tr><td><code>spawnnpcs</code></td><td>Force re-spawn all town NPCs</td></tr>
+  <tr><td><code>npcstatus</code></td><td>Show all spawned town NPCs with distance</td></tr>
+  <tr><td><code>spawnvendors</code></td><td>Force re-spawn all vendor NPCs</td></tr>
+  <tr><td><code>vendorstatus</code></td><td>Show all spawned vendor NPCs</td></tr>
+  <tr><td><code>vendorresync</code></td><td>Request a fresh vendor list from the server</td></tr>
+</table>
+
+<h2>Server Console (Admin Only)</h2>
+<table>
+  <tr><th>Command</th><th>Description</th></tr>
+  <tr><td><code>giveitem [playerid] [itemcode] [qty]</code></td><td>Give an item to a player</td></tr>
+  <tr><td><code>giveweapon [playerid|all] [weapon]</code></td><td>Give a weapon to a player or all players</td></tr>
+  <tr><td><code>resendrecipes</code></td><td>Push current recipe list to all online players</td></tr>
+  <tr><td><code>givecash [playerid] [amount]</code></td><td>Give cash to a player</td></tr>
+  <tr><td><code>giveskillpoints [playerid] [skill] [pts]</code></td><td>Award skill points directly</td></tr>
+  <tr><td><code>rotatenodes</code></td><td>Force a resource node rotation</td></tr>
+  <tr><td><code>vendoradmin list</code></td><td>List all player vendors with owner, position, earnings</td></tr>
+  <tr><td><code>vendoradmin clear [charId]</code></td><td>Force-delete a player's vendor</td></tr>
+</table>
+
+<!-- PLANNED -->
+<h1 class="section" id="planned">Planned &amp; In Development</h1>
+
+<h2>Economy &amp; Trade</h2>
+<ul>
+  <li><strong>Market Board</strong> — central buy/sell order board per town; async trading without a vendor NPC</li>
+  <li><strong>Marked Bills laundering</strong> — mechanics for converting criminal income</li>
+  <li><strong>NPC vendors for basic goods</strong> — seeds, medical supplies, non-craftable raw materials at fixed town stalls</li>
+</ul>
+
+<h2>Professions</h2>
+<ul>
+  <li><strong>Phase 2 profession system</strong> — one profession per character, ratio-controlled, monthly switch</li>
+  <li><strong>Horse Trainer profession gates</strong> — trainers unlock Bond Levels 4–5; certification transfers on sale</li>
+  <li><strong>Player-to-Horse Bond skill</strong> — behavioral buffs: skittishness reduction, trick commands</li>
+  <li><strong>Skills not yet generating XP:</strong> Mining, Farming, Hunting, Tracking, Tanning, Tailoring, Brewing, Trading</li>
+</ul>
+
+<h2>Combat &amp; Conflict</h2>
+<ul>
+  <li><strong>PvP death hooks</strong> — wanted level escalation, marshal events on confirmed wilderness kills</li>
+  <li><strong>Bounty/contract integration</strong> — tighter connection between /collectbounty and the contract system</li>
+</ul>
+
+<h2>World Expansion</h2>
+<ul>
+  <li><strong>Saint Denis &amp; Annesburg</strong> — NPC and station coordinates need in-game collection</li>
+  <li><strong>Blackwater</strong> — map ground layer issue under investigation</li>
+  <li><strong>Resource node survey</strong> — most locations approximate; Flatneck Station and Dakota River confirmed</li>
+</ul>
+
+<h2>Server Access</h2>
+<ul>
+  <li><strong>Port forwarding</strong> — external players cannot connect yet; requires DMZ on AT&amp;T router → EdgeRouter WAN, then EdgeRouter → server port 30120</li>
+</ul>
+
+<h2>Quality of Life</h2>
+<ul>
+  <li>Vendor item label lookup — map item codes to proper display names</li>
+  <li>Vendor buy quantity selector — quantity picker instead of buy-1-per-click</li>
+  <li>NPC model verification in-game for vendor types</li>
+</ul>
+
+</div>
+
+<footer>
+  Rangers Bluff RP — Server documentation &nbsp;|&nbsp; Last updated June 2026 &nbsp;|&nbsp; <a href="https://github.com/RangersBluffRP/rangers-bluff-guide" style="color:#8b6914;">GitHub</a>
+</footer>
+
+</body>
+</html>
