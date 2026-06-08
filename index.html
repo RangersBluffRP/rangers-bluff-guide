@@ -139,7 +139,7 @@
 <div class="hero">
   <h1>⚔ Rangers Bluff RP</h1>
   <div class="subtitle">Server Guide & Player Reference</div>
-  <div class="updated">Last updated: June 2026</div>
+  <div class="updated">Last updated: June 8, 2026</div>
 </div>
 
 <nav>
@@ -148,6 +148,7 @@
   <a href="#skills">Skills</a>
   <a href="#economy">Economy</a>
   <a href="#crafting">Crafting</a>
+  <a href="#butchering">Butchering</a>
   <a href="#bounties">Bounties</a>
   <a href="#properties">Properties</a>
   <a href="#horses">Horses</a>
@@ -182,10 +183,10 @@
 <p>A profession is your character's primary economic identity. Professions create interdependence — a blacksmith needs a miner for ore, a cook needs a farmer for ingredients, a horse trainer needs riders who want trained horses. No one is self-sufficient, and that is intentional.</p>
 
 <h2>Phase 1 — Open Access <span class="badge badge-live">CURRENT</span></h2>
-<p><strong>All 12 professions are currently open to all players.</strong> Any character can level any skill by doing the associated activity. This phase continues until the server reaches a critical mass of active players.</p>
+<p><strong>All 13 professions are currently open to all players.</strong> Any character can level any skill by doing the associated activity. This phase continues until the server reaches a critical mass of active players.</p>
 <table>
   <tr><th>Category</th><th>Professions</th></tr>
-  <tr><td><strong>Land &amp; Gathering</strong></td><td>Mining, Farming, Hunting, Tracking</td></tr>
+  <tr><td><strong>Land &amp; Gathering</strong></td><td>Mining, Farming, Hunting, Tracking, Butchering</td></tr>
   <tr><td><strong>Crafting</strong></td><td>Blacksmithing, Gunsmithing, Tanning, Tailoring</td></tr>
   <tr><td><strong>Trade &amp; Living</strong></td><td>Cooking, Brewing, Trading, Horse Training</td></tr>
 </table>
@@ -201,10 +202,10 @@
 
 <!-- SKILLS -->
 <h1 class="section" id="skills">Skills System <span class="badge badge-live">LIVE</span></h1>
-<p>Every character has <strong>12 skills</strong>, each from <strong>Level 1 to Level 5</strong>. Skills advance by doing the activity — there are no skill books or shortcuts. Each level unlocks new recipes, access, or multipliers.</p>
+<p>Every character has <strong>13 skills</strong>, each from <strong>Level 1 to Level 5</strong>. Skills advance by doing the activity — there are no skill books or shortcuts. Each level unlocks new recipes, access, or multipliers.</p>
 <table>
   <tr><th>Group</th><th>Skills</th></tr>
-  <tr><td><strong>Land &amp; Gathering</strong></td><td>Mining, Farming, Hunting, Tracking</td></tr>
+  <tr><td><strong>Land &amp; Gathering</strong></td><td>Mining, Farming, Hunting, Tracking, Butchering</td></tr>
   <tr><td><strong>Crafting</strong></td><td>Blacksmithing, Gunsmithing, Tanning, Tailoring</td></tr>
   <tr><td><strong>Trade &amp; Living</strong></td><td>Cooking, Brewing, Trading, Horse Training</td></tr>
 </table>
@@ -244,7 +245,55 @@
   <tr><td>Gunsmith Bench</td><td>✅</td><td>✅</td><td>✅</td></tr>
   <tr><td>Cooking Fire</td><td>✅</td><td>✅</td><td>✅</td></tr>
   <tr><td>Stable Workbench</td><td>✅</td><td>✅</td><td>✅</td></tr>
+  <tr><td>Butcher Bench</td><td>⏳ coords needed</td><td>✅</td><td>⏳ coords needed</td></tr>
 </table>
+
+<!-- BUTCHERING -->
+<h1 class="section" id="butchering">Butchering <span class="badge badge-live">LIVE</span></h1>
+<p>Butchering lets you process a dead animal carcass into raw meat cuts at a <strong>Butcher Bench</strong>. Cuts go directly into your inventory and can be cooked, sold to other players, or stocked in your vendor. Your <strong>Butchering skill</strong> (Level 1–5) determines how many cuts you yield per session.</p>
+
+<h2>How It Works</h2>
+<ol>
+  <li>Kill an animal in the wild.</li>
+  <li>Carry (or lead the carcass toward) a <strong>Butcher Bench</strong> — it must be within about 10 meters of the bench.</li>
+  <li>Stand at the bench. A <strong>hold-G prompt</strong> appears: <em>Butcher: [Animal]</em>.</li>
+  <li>Hold G for 2 seconds. A butchering animation plays (duration scales with animal size).</li>
+  <li>Cuts land in your inventory. XP is awarded to your Butchering skill.</li>
+</ol>
+
+<h2>Cuts Per Skill Level</h2>
+<table>
+  <tr><th>Butchering Level</th><th>Cuts Yielded</th><th>Notes</th></tr>
+  <tr><td>1</td><td>1 cut</td><td>Starting level</td></tr>
+  <tr><td>2</td><td>2 cuts</td><td></td></tr>
+  <tr><td>3</td><td>3 cuts</td><td></td></tr>
+  <tr><td>4</td><td>4 cuts</td><td></td></tr>
+  <tr><td>5</td><td>5 cuts (full yield)</td><td>Master butcher</td></tr>
+</table>
+<p>Cuts are drawn randomly from each animal's pool — a higher skill level gets more draws, not guaranteed specific cuts. Over time you will see every cut from a species.</p>
+
+<h2>Supported Animals</h2>
+<table>
+  <tr><th>Animal</th><th>Size</th><th>XP Awarded</th><th>Possible Cuts</th></tr>
+  <tr><td><strong>Whitetail Deer</strong></td><td>Large</td><td>25 XP</td><td>Front Shank, Rear Shank, Tenderloin, Neck Roast, Backstrap</td></tr>
+  <tr><td><strong>Elk</strong></td><td>Very Large</td><td>35 XP</td><td>Chuck Roast, Rump Roast, Tenderloin, Ribeye, Osso Buco Shank</td></tr>
+  <tr><td><strong>Wild Boar</strong></td><td>Large</td><td>25 XP</td><td>Pork Belly, Shoulder, Loin Roast, Ham, Baby Back Ribs</td></tr>
+  <tr><td><strong>Black Bear</strong></td><td>Very Large</td><td>35 XP</td><td>Shoulder Roast, Rump Roast, Loin Steak, Paw Meat, Belly Slab</td></tr>
+  <tr><td><strong>Rabbit</strong></td><td>Tiny</td><td>8 XP</td><td>Hind Legs, Front Legs, Loin, Rib Cage Meat, Offal</td></tr>
+  <tr><td><strong>Wild Turkey</strong></td><td>Medium</td><td>18 XP</td><td>Breast Fillet, Drumstick, Thigh, Wing, Carcass Stock</td></tr>
+</table>
+
+<h2>Butcher Bench Locations</h2>
+<table>
+  <tr><th>Town</th><th>Status</th></tr>
+  <tr><td>Rhodes</td><td>✅ Active</td></tr>
+  <tr><td>Valentine</td><td>⏳ Bench location needs in-game coords — use <code>/butchercoords</code> at the bench</td></tr>
+  <tr><td>Strawberry</td><td>⏳ Bench location needs in-game coords</td></tr>
+  <tr><td>Blackwater</td><td>⏳ Bench location needs in-game coords</td></tr>
+  <tr><td>Saint Denis</td><td>⏳ Bench location needs in-game coords</td></tr>
+  <tr><td>Annesburg</td><td>⏳ Bench location needs in-game coords</td></tr>
+</table>
+<div class="callout"><p><strong>Rhodes is the only active bench right now.</strong> Other towns have placeholder coordinates. Wolf: stand at each town's butcher bench and run <code>/butchercoords</code> in F8 to get confirmed coords.</p></div>
 
 <!-- BOUNTIES -->
 <h1 class="section" id="bounties">Bounties &amp; Contracts <span class="badge badge-live">LIVE</span></h1>
@@ -528,7 +577,7 @@
 </div>
 
 <footer>
-  Rangers Bluff RP — Server documentation &nbsp;|&nbsp; Last updated June 2026 &nbsp;|&nbsp; <a href="https://github.com/RangersBluffRP/rangers-bluff-guide" style="color:#8b6914;">GitHub</a>
+  Rangers Bluff RP — Server documentation &nbsp;|&nbsp; Last updated June 8, 2026 &nbsp;|&nbsp; <a href="https://github.com/RangersBluffRP/rangers-bluff-guide" style="color:#8b6914;">GitHub</a>
 </footer>
 
 </body>
