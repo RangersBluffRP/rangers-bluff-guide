@@ -15,8 +15,20 @@
   .hero {
     background: linear-gradient(135deg, #2c1a08 0%, #1a1208 60%, #0d0a04 100%);
     border-bottom: 3px solid #8b6914;
-    padding: 48px 24px 36px;
+    padding: 36px 24px 32px;
     text-align: center;
+  }
+  .hero-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #8b6914;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.7);
+    margin-bottom: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero h1 {
     font-size: 2.8em;
@@ -137,7 +149,8 @@
 <body>
 
 <div class="hero">
-  <h1>⚔ Rangers Bluff RP</h1>
+  <img src="images/logo.jpg" alt="Rangers Bluff RP" class="hero-logo">
+  <h1>Rangers Bluff RP</h1>
   <div class="subtitle">Server Guide & Player Reference</div>
   <div class="updated">Last updated: June 8, 2026</div>
 </div>
