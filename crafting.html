@@ -220,13 +220,14 @@
         <div class="skill-req">Skill: Tanning 2 | Time: 45s | XP: 15</div>
       </div>
 
-      <div class="recipe-card" data-prof="tanning" data-tier="2" data-text="bone handle bone hide tanning t2">
+      <div class="recipe-card" data-prof="tanning" data-tier="2" data-text="bone handle bone hide iron bar tanning t2">
         <span class="tier-badge tier-2">T2</span>
         <div class="recipe-name">Bone Handle <span style="color:#7a6040;font-weight:normal;">×2</span></div>
         <div class="recipe-output">→ bone_handle</div>
         <ul class="ingredient-list">
           <li>3× Bone <span class="cross-tag">hunting</span></li>
           <li>1× Scraped Hide</li>
+          <li class="cross-profession">1× Iron Bar <span class="cross-tag">blacksmithing</span></li>
         </ul>
         <div class="skill-req">Skill: Tanning 2 | Time: 20s | XP: 5</div>
       </div>
@@ -306,6 +307,7 @@
         <ul class="ingredient-list">
           <li>3× Rough Cloth</li>
           <li>2× Cotton <span class="cross-tag">farming</span></li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
         </ul>
         <div class="skill-req">Skill: Tailoring 2 | Time: 60s | XP: 15</div>
       </div>
@@ -408,6 +410,7 @@
         <ul class="ingredient-list">
           <li>2× Raw Spirits</li>
           <li class="cross-profession">2× Wild Berries <span class="cross-tag">foraging</span></li>
+          <li class="cross-profession">1× Salt <span class="cross-tag">cooking/store</span></li>
         </ul>
         <div class="skill-req">Skill: Brewing 2 | Time: 90s | XP: 20</div>
       </div>
@@ -432,6 +435,7 @@
           <li>1× Raw Spirits</li>
           <li class="cross-profession">3× Common Herbs <span class="cross-tag">foraging</span></li>
           <li class="cross-profession">2× Mushroom <span class="cross-tag">foraging</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
         </ul>
         <div class="skill-req">Skill: Brewing 3 | Time: 45s | XP: 15</div>
       </div>
@@ -515,6 +519,18 @@
         <div class="skill-req">Skill: Blacksmithing 3 | Time: 75s | XP: 35</div>
       </div>
 
+      <div class="recipe-card" data-prof="blacksmithing" data-tier="3" data-text="fine gun parts steel alloy timber bone handle gunsmithing t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Fine Gun Parts</div>
+        <div class="recipe-output">→ gun_parts_high</div>
+        <ul class="ingredient-list">
+          <li>2× Steel Alloy</li>
+          <li>1× Timber <span class="cross-tag">woodcutting</span></li>
+          <li class="cross-profession">1× Bone Handle <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Blacksmithing 3 | Time: 90s | XP: 40</div>
+      </div>
+
       <div class="recipe-card" data-prof="blacksmithing" data-tier="1">
         <span class="tier-badge tier-1">T1</span>
         <div class="recipe-name">Nails <span style="color:#7a6040;font-weight:normal;">×5</span></div>
@@ -542,6 +558,7 @@
         <ul class="ingredient-list">
           <li>3× Iron Bar</li>
           <li>1× Rope</li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
         </ul>
         <div class="skill-req">Skill: Blacksmithing 2 | Time: 60s | XP: 20</div>
       </div>
@@ -678,6 +695,7 @@
           <li class="cross-profession">4× Mushroom <span class="cross-tag">foraging</span></li>
           <li class="cross-profession">2× Common Herbs <span class="cross-tag">foraging</span></li>
           <li>1× Salt</li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
         </ul>
         <div class="skill-req">Skill: Cooking 2 | Time: 30s | XP: 10</div>
       </div>
@@ -702,6 +720,7 @@
           <li>3× Wheat <span class="cross-tag">farming</span></li>
           <li>2× Eggs</li>
           <li>1× Animal Fat <span class="cross-tag">hunting</span></li>
+          <li>1× Salt</li>
         </ul>
         <div class="skill-req">Skill: Cooking 2 | Time: 30s | XP: 10</div>
       </div>
@@ -715,6 +734,7 @@
           <li class="cross-profession">1× Rare Herbs <span class="cross-tag">foraging</span></li>
           <li>1× Salt</li>
           <li>2× Tomato <span class="cross-tag">farming</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
         </ul>
         <div class="skill-req">Skill: Cooking 3 | Time: 60s | XP: 25</div>
       </div>
@@ -777,8 +797,22 @@
           <li class="cross-profession">3× Common Herbs <span class="cross-tag">foraging</span></li>
           <li>2× Animal Fat</li>
           <li class="cross-profession">1× Wild Berries <span class="cross-tag">foraging</span></li>
+          <li class="cross-profession">1× Horse Shoe <span class="cross-tag">blacksmithing</span></li>
         </ul>
         <div class="skill-req">Skill: Horse Training 2 | Time: 90s | XP: 25</div>
+      </div>
+
+      <div class="recipe-card" data-prof="horse_training" data-tier="3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Life Pill (Quality)</div>
+        <div class="recipe-output">→ life_pill_t2</div>
+        <ul class="ingredient-list">
+          <li class="cross-profession">2× Rare Herbs <span class="cross-tag">foraging danger</span></li>
+          <li>2× Animal Fat</li>
+          <li class="cross-profession">1× Gold Nugget <span class="cross-tag">mining/panning</span></li>
+          <li class="cross-profession">2× Horse Shoe <span class="cross-tag">blacksmithing</span></li>
+        </ul>
+        <div class="skill-req">Skill: Horse Training 3 | Time: 2min | XP: 40</div>
       </div>
 
       <div class="recipe-card" data-prof="horse_training" data-tier="3">
@@ -837,10 +871,10 @@
           <tr><td><strong>Blacksmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
           <tr><td><strong>Gunsmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td></tr>
           <tr><td><strong>Cooking</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Tanning</strong></td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Tanning</strong></td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
           <tr><td><strong>Tailoring</strong></td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td></tr>
           <tr><td><strong>Brewing</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Horse Training</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td></tr>
+          <tr><td><strong>Horse Training</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td></tr>
         </tbody>
       </table>
     </div>
