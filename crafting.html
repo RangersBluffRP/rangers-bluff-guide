@@ -147,7 +147,7 @@
 
 <div class="hero">
   <h1>⚒️ Crafting Reference</h1>
-  <p>All 13 professions, every recipe, ingredient requirements, and cross-profession dependencies.<br>
+  <p>All 14 professions, every recipe, ingredient requirements, and cross-profession dependencies.<br>
      Higher tiers require crafted materials from other professions — plan accordingly.</p>
 </div>
 
@@ -181,6 +181,7 @@
     <button class="filter-btn" data-prof="baker">🥧 Baker</button>
     <button class="filter-btn" data-prof="miner_crafting">⛏️ Miner Crafting</button>
     <button class="filter-btn" data-prof="hunter">🏹 Hunter</button>
+    <button class="filter-btn" data-prof="jeweler">💍 Jeweler</button>
   </div>
 
   <!-- Recipe Sections (static data matching migrations 015-022) -->
@@ -1556,6 +1557,58 @@
     </div>
   </div>
 
+  <!-- Jeweler -->
+  <div class="profession-section" data-prof="jeweler">
+    <h2>💍 Jeweler</h2>
+    <p class="prof-desc">Jewelers draw wire from precious metal bars, set gems mined from the earth, and craft the finest wearable goods on the frontier. Every master piece requires inputs from Blacksmithing, Miner Crafting, and Tanning — the most cross-profession profession in the game.</p>
+
+    <h3>Tier 1 — Wire Drawing</h3>
+    <table>
+      <thead><tr><th>Recipe</th><th>Skill</th><th>Ingredients</th><th>Output</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Gold Wire</td><td>1</td><td>Gold Bar ×2</td><td>Gold Wire ×3</td><td>30s</td></tr>
+        <tr><td>Silver Wire</td><td>1</td><td>Silver Bar ×2</td><td>Silver Wire ×3</td><td>30s</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Tier 2 — Simple Pieces</h3>
+    <table>
+      <thead><tr><th>Recipe</th><th>Skill</th><th>Ingredients</th><th>Output</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Plain Band</td><td>2</td><td>Gold Wire ×2, Silver Wire ×1</td><td>Plain Band ×2</td><td>1m</td></tr>
+        <tr><td>Silver Brooch</td><td>2</td><td>Silver Wire ×3, Turquoise ×1</td><td>Silver Brooch ×2</td><td>1m 15s</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Tier 3 — Gem-Set Pieces <span class="cross-note">⚙ Requires Mining gems</span></h3>
+    <table>
+      <thead><tr><th>Recipe</th><th>Skill</th><th>Ingredients</th><th>Output</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Gem Pendant</td><td>3</td><td>Gold Wire ×2, Ruby ×1</td><td>Gem Pendant ×1</td><td>1m 30s</td></tr>
+        <tr><td>Gem-Set Ring</td><td>3</td><td>Gold Wire ×3, Silver Wire ×1, Sapphire ×1</td><td>Gem-Set Ring ×1</td><td>2m</td></tr>
+        <tr><td>Turquoise Bracelet</td><td>3</td><td>Silver Wire ×4, Turquoise ×2, Cured Leather ×1 <em>(Tanning)</em></td><td>Turquoise Bracelet ×1</td><td>2m</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Tier 4 — Master Pieces <span class="cross-note">⚙ Blacksmithing + Miner Crafting required</span></h3>
+    <table>
+      <thead><tr><th>Recipe</th><th>Skill</th><th>Ingredients</th><th>Output</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>Gold Necklace</td><td>4</td><td>Gold Wire ×4, Gold Bar ×1, Ruby ×1, Sapphire ×1</td><td>Gold Necklace ×1</td><td>3m</td></tr>
+        <tr>
+          <td>Pocket Watch</td><td>4</td>
+          <td>Gold Wire ×3, Silver Wire ×2, Iron Bar ×2 <em>(Blacksmith)</em>, Refined Gold Bar ×1 <em>(Miner Crafting)</em>, Cured Leather ×1 <em>(Tanning)</em></td>
+          <td>Pocket Watch ×1</td><td>5m</td>
+        </tr>
+        <tr>
+          <td>Fine Jewelry Set</td><td>4</td>
+          <td>Gold Wire ×4, Silver Wire ×2, Diamond ×1, Refined Gold Bar ×1 <em>(Miner Crafting)</em>, Bone ×2 <em>(Hunting)</em></td>
+          <td>Fine Jewelry Set ×1</td><td>10m</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- Cross-Profession Dependency Matrix -->
   <div class="dep-section">
     <h3>⬡ Cross-Profession Dependency Matrix</h3>
@@ -1583,23 +1636,25 @@
             <th>Baker</th>
             <th>Miner Crafting</th>
             <th>Hunter</th>
+            <th>Jeweler</th>
             <th>Horse Training</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Blacksmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Gunsmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Cooking</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Tanning</strong></td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Tailoring</strong></td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Brewing</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Carpenter</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Herbalist</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Leatherworker</strong></td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Baker</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Miner Crafting</strong></td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Hunter</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td></tr>
-          <tr><td><strong>Horse Training</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td></tr>
+          <tr><td><strong>Blacksmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Gunsmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Cooking</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Tanning</strong></td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Tailoring</strong></td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Brewing</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Carpenter</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Herbalist</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Leatherworker</strong></td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Baker</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Miner Crafting</strong></td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Hunter</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Jeweler</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="self">self</td><td class="none">—</td></tr>
+          <tr><td><strong>Horse Training</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td></tr>
         </tbody>
       </table>
     </div>
@@ -1610,7 +1665,7 @@
 <footer>
   <a href="index.html">← Server Guide</a> &nbsp;|&nbsp;
   Rangers Bluff RP &nbsp;|&nbsp;
-  Crafting Reference v1.2 — 2026-06-10 — Jolli Phase 2
+  Crafting Reference v1.3 — 2026-06-10 — Jolli Phase 3 (Jeweler)
 </footer>
 
 <script>
