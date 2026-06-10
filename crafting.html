@@ -147,7 +147,7 @@
 
 <div class="hero">
   <h1>⚒️ Crafting Reference</h1>
-  <p>All 7 professions, every recipe, ingredient requirements, and cross-profession dependencies.<br>
+  <p>All 10 professions, every recipe, ingredient requirements, and cross-profession dependencies.<br>
      Higher tiers require crafted materials from other professions — plan accordingly.</p>
 </div>
 
@@ -175,6 +175,9 @@
     <button class="filter-btn" data-prof="tanning">🦌 Tanning</button>
     <button class="filter-btn" data-prof="tailoring">🧵 Tailoring</button>
     <button class="filter-btn" data-prof="brewing">🍺 Brewing</button>
+    <button class="filter-btn" data-prof="carpenter">🪵 Carpenter</button>
+    <button class="filter-btn" data-prof="herbalist">🌿 Herbalist</button>
+    <button class="filter-btn" data-prof="leatherworking">🧳 Leatherworker</button>
   </div>
 
   <!-- Recipe Sections (static data matching migrations 015-022) -->
@@ -843,6 +846,375 @@
     </div>
   </div>
 
+  <!-- ══════════════════ CARPENTER ══════════════════ -->
+  <div class="profession-section" data-prof="carpenter">
+    <div class="profession-header">
+      <h2>🪵 Carpenter</h2>
+      <span class="profession-badge" style="background:#2a1a08;color:#d4a843;border:1px solid #6a4010;">NEW</span>
+      <span style="color:#7a6040;font-size:0.9rem;">Foundational profession. Barrels, saddle trees, gun stocks, and mine supports unlock other professions' T3–T4 recipes.</span>
+    </div>
+    <div class="recipe-grid">
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="1" data-text="timber plank hardwood carpenter t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Timber Planks <span style="color:#7a6040;font-weight:normal;">×4</span></div>
+        <div class="recipe-output">→ timber_plank</div>
+        <ul class="ingredient-list">
+          <li>4× Hardwood <span class="cross-tag">woodcutting</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 1 | Time: 30s | XP: 8</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="1" data-text="linseed oil sap coal carpenter t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Linseed Oil <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ linseed_oil</div>
+        <ul class="ingredient-list">
+          <li>3× Tree Sap <span class="cross-tag">foraging</span></li>
+          <li>2× Coal <span class="cross-tag">mining</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 1 | Time: 45s | XP: 10</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="1" data-text="drying rack wood rope herbalist carpenter t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Drying Rack Kit</div>
+        <div class="recipe-output">→ drying_rack_kit</div>
+        <ul class="ingredient-list">
+          <li>3× Wood <span class="cross-tag">woodcutting</span></li>
+          <li>1× Rope</li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 1 | Time: 30s | XP: 8</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="2" data-text="barrel timber plank iron bar leather brewer t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Oak Barrel</div>
+        <div class="recipe-output">→ barrel</div>
+        <ul class="ingredient-list">
+          <li>4× Timber Plank</li>
+          <li class="cross-profession">2× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 2 | Time: 90s | XP: 22</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="2" data-text="gun stock hardwood linseed oil gunsmith t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Gun Stock Blank</div>
+        <div class="recipe-output">→ gun_stock</div>
+        <ul class="ingredient-list">
+          <li>2× Hardwood <span class="cross-tag">woodcutting</span></li>
+          <li>1× Linseed Oil</li>
+          <li class="cross-profession">1× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 2 | Time: 75s | XP: 20</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="2" data-text="saddle tree hardwood iron leather leatherworker t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Saddle Tree</div>
+        <div class="recipe-output">→ saddle_tree</div>
+        <ul class="ingredient-list">
+          <li>2× Hardwood <span class="cross-tag">woodcutting</span></li>
+          <li class="cross-profession">2× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 2 | Time: 90s | XP: 25</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="3" data-text="mine support beam timber iron leather miner t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Mine Support Beam <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ mine_support</div>
+        <ul class="ingredient-list">
+          <li>3× Timber Plank</li>
+          <li class="cross-profession">2× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 3 | Time: 120s | XP: 30</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="3" data-text="reinforced barrel timber iron tallow sap brewing t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Reinforced Barrel <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ barrel ×2</div>
+        <ul class="ingredient-list">
+          <li>4× Timber Plank</li>
+          <li class="cross-profession">3× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
+          <li>1× Tree Sap <span class="cross-tag">foraging</span></li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 3 | Time: 120s | XP: 30</div>
+      </div>
+
+      <div class="recipe-card" data-prof="carpenter" data-tier="4" data-text="fine saddle tree hardwood iron leather bone handle linseed leatherworker t4 premium">
+        <span class="tier-badge tier-4">T4</span>
+        <div class="recipe-name">Fine Saddle Tree <span style="color:#e07020;">★ Premium</span> <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ saddle_tree ×2</div>
+        <ul class="ingredient-list">
+          <li>3× Hardwood <span class="cross-tag">woodcutting</span></li>
+          <li class="cross-profession">3× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li class="cross-profession">2× Cured Leather <span class="cross-tag">tanning T2</span></li>
+          <li class="cross-profession">1× Bone Handle <span class="cross-tag">tanning T2</span></li>
+          <li>1× Linseed Oil</li>
+        </ul>
+        <div class="skill-req">Skill: Carpenter 4 | Time: 3min | XP: 55</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════ HERBALIST ══════════════════ -->
+  <div class="profession-section" data-prof="herbalist">
+    <div class="profession-header">
+      <h2>🌿 Herbalist</h2>
+      <span class="profession-badge" style="background:#0a2010;color:#60c060;border:1px solid #2a6020;">NEW</span>
+      <span style="color:#7a6040;font-size:0.9rem;">Produces medicines, leather conditioner, and fertilizer. Feeds tanners, leatherworkers, and horse trainers.</span>
+    </div>
+    <div class="recipe-grid">
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="1" data-text="herb bundle common herbs herbalist t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Herb Bundle <span style="color:#7a6040;font-weight:normal;">×4</span></div>
+        <div class="recipe-output">→ herbs_common</div>
+        <ul class="ingredient-list">
+          <li>3× Common Herbs <span class="cross-tag">foraging</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 1 | Time: 20s | XP: 8</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="1" data-text="herb fertilizer herbs bone herbalist t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Herb Fertilizer <span style="color:#7a6040;font-weight:normal;">×3</span></div>
+        <div class="recipe-output">→ herb_fertilizer</div>
+        <ul class="ingredient-list">
+          <li>2× Common Herbs <span class="cross-tag">foraging</span></li>
+          <li>2× Bone <span class="cross-tag">hunting</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 1 | Time: 45s | XP: 10</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="1" data-text="mineral water sap salt herbalist t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Mineral Water <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ mineral_water</div>
+        <ul class="ingredient-list">
+          <li>2× Tree Sap <span class="cross-tag">foraging</span></li>
+          <li>1× Salt</li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 1 | Time: 30s | XP: 8</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="2" data-text="wound salve herbs animal fat glass vial herbalist t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Wound Salve <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ wound_salve</div>
+        <ul class="ingredient-list">
+          <li>3× Common Herbs <span class="cross-tag">foraging</span></li>
+          <li>1× Animal Fat <span class="cross-tag">hunting</span></li>
+          <li class="cross-profession">1× Glass Vial <span class="cross-tag">miner/carpenter</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 2 | Time: 60s | XP: 20</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="2" data-text="burn salve herbs tallow glass vial herbalist t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Burn Salve <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ burn_salve</div>
+        <ul class="ingredient-list">
+          <li>2× Common Herbs <span class="cross-tag">foraging</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
+          <li class="cross-profession">1× Glass Vial <span class="cross-tag">miner/carpenter</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 2 | Time: 60s | XP: 20</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="2" data-text="leather conditioner herbs tallow hide scraped tanning leatherworker t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Leather Conditioner <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ leather_conditioner</div>
+        <ul class="ingredient-list">
+          <li>2× Common Herbs <span class="cross-tag">foraging</span></li>
+          <li class="cross-profession">2× Tallow <span class="cross-tag">tanning T1</span></li>
+          <li class="cross-profession">1× Scraped Hide <span class="cross-tag">tanning T1</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 2 | Time: 75s | XP: 22</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="3" data-text="polishing paste rare herbs mineral water salt herbalist t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Polishing Paste <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ polishing_paste</div>
+        <ul class="ingredient-list">
+          <li>2× Rare Herbs <span class="cross-tag">foraging danger</span></li>
+          <li>1× Mineral Water</li>
+          <li>1× Salt</li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 3 | Time: 90s | XP: 28</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="3" data-text="horse remedy herbal rare herbs mineral water leather tanning t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Horse Remedy (Herbal)</div>
+        <div class="recipe-output">→ tonic_health</div>
+        <ul class="ingredient-list">
+          <li>2× Rare Herbs <span class="cross-tag">foraging danger</span></li>
+          <li>1× Mineral Water</li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 3 | Time: 90s | XP: 28</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="4" data-text="antidote rare herbs animal fat glass vial tallow herbalist t4 premium">
+        <span class="tier-badge tier-4">T4</span>
+        <div class="recipe-name">Antidote <span style="color:#e07020;">★ Premium</span></div>
+        <div class="recipe-output">→ antidote</div>
+        <ul class="ingredient-list">
+          <li>3× Rare Herbs <span class="cross-tag">foraging danger</span></li>
+          <li>1× Animal Fat <span class="cross-tag">hunting</span></li>
+          <li class="cross-profession">2× Glass Vial <span class="cross-tag">miner/carpenter</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 4 | Time: 2min | XP: 50</div>
+      </div>
+
+      <div class="recipe-card" data-prof="herbalist" data-tier="4" data-text="master fertilizer mix rare herbs bone tallow salt herbalist t4">
+        <span class="tier-badge tier-4">T4</span>
+        <div class="recipe-name">Master Fertilizer Mix <span style="color:#7a6040;font-weight:normal;">×6</span></div>
+        <div class="recipe-output">→ herb_fertilizer ×6</div>
+        <ul class="ingredient-list">
+          <li>2× Rare Herbs <span class="cross-tag">foraging danger</span></li>
+          <li>3× Bone <span class="cross-tag">hunting</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
+          <li>1× Salt</li>
+        </ul>
+        <div class="skill-req">Skill: Herbalist 4 | Time: 2min | XP: 45</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════ LEATHERWORKER ══════════════════ -->
+  <div class="profession-section" data-prof="leatherworking">
+    <div class="profession-header">
+      <h2>🧳 Leatherworker</h2>
+      <span class="profession-badge" style="background:#2a1208;color:#d4a843;border:1px solid #6a3808;">NEW</span>
+      <span style="color:#7a6040;font-size:0.9rem;">Takes processed leather and crafts saddles, holsters, packs, and belts. T4 Master Saddle requires 4 professions.</span>
+    </div>
+    <div class="recipe-grid">
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="1" data-text="leather flask leather cured rope leatherworker t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Leather Flask <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ leather_flask</div>
+        <ul class="ingredient-list">
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
+          <li>1× Rope</li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 1 | Time: 45s | XP: 10</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="1" data-text="gun holster leather cured nails leatherworker t1">
+        <span class="tier-badge tier-1">T1</span>
+        <div class="recipe-name">Gun Holster</div>
+        <div class="recipe-output">→ gun_holster</div>
+        <ul class="ingredient-list">
+          <li class="cross-profession">2× Cured Leather <span class="cross-tag">tanning T2</span></li>
+          <li class="cross-profession">2× Nails <span class="cross-tag">blacksmithing</span></li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 1 | Time: 60s | XP: 12</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="2" data-text="soft leather hide scraped tallow salt tanning t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Soft Leather <span style="color:#7a6040;font-weight:normal;">×2</span> <span style="font-size:0.7rem;color:#7a6040;">(at Tannery)</span></div>
+        <div class="recipe-output">→ soft_leather</div>
+        <ul class="ingredient-list">
+          <li>2× Scraped Hide <span class="cross-tag">tanning T1</span></li>
+          <li class="cross-profession">1× Tallow <span class="cross-tag">tanning T1</span></li>
+          <li>1× Salt</li>
+        </ul>
+        <div class="skill-req">Skill: Tanning 2 | Time: 60s | XP: 15</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="2" data-text="ammo belt soft leather iron bar canvas leatherworker t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Ammo Belt</div>
+        <div class="recipe-output">→ ammo_belt</div>
+        <ul class="ingredient-list">
+          <li>2× Soft Leather</li>
+          <li class="cross-profession">1× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li>1× Canvas</li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 2 | Time: 75s | XP: 20</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="2" data-text="tool belt heavy leather iron bar canvas leatherworker t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Tool Belt</div>
+        <div class="recipe-output">→ tool_belt</div>
+        <ul class="ingredient-list">
+          <li>2× Heavy Leather</li>
+          <li class="cross-profession">2× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li>1× Canvas</li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 2 | Time: 75s | XP: 22</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="2" data-text="ore satchel heavy leather iron bar canvas leatherworker t2">
+        <span class="tier-badge tier-2">T2</span>
+        <div class="recipe-name">Ore Satchel</div>
+        <div class="recipe-output">→ ore_satchel</div>
+        <ul class="ingredient-list">
+          <li>2× Heavy Leather</li>
+          <li class="cross-profession">2× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li>2× Canvas</li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 2 | Time: 90s | XP: 22</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="3" data-text="hunting pack heavy leather iron bar canvas leather conditioner herbalist t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Hunting Pack</div>
+        <div class="recipe-output">→ hunting_pack</div>
+        <ul class="ingredient-list">
+          <li>3× Heavy Leather</li>
+          <li class="cross-profession">2× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li>2× Canvas</li>
+          <li class="cross-profession">1× Leather Conditioner <span class="cross-tag">herbalist T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 3 | Time: 2min | XP: 30</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="3" data-text="iron stirrups iron bar leather cured blacksmith t3">
+        <span class="tier-badge tier-3">T3</span>
+        <div class="recipe-name">Iron Stirrups <span style="color:#7a6040;font-weight:normal;">×2</span></div>
+        <div class="recipe-output">→ iron_stirrups</div>
+        <ul class="ingredient-list">
+          <li class="cross-profession">3× Iron Bar <span class="cross-tag">blacksmithing</span></li>
+          <li class="cross-profession">1× Cured Leather <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 3 | Time: 90s | XP: 25</div>
+      </div>
+
+      <div class="recipe-card" data-prof="leatherworking" data-tier="4" data-text="master riding saddle saddle tree iron stirrups heavy leather conditioner bone handle carpenter blacksmith herbalist t4 premium">
+        <span class="tier-badge tier-4">T4</span>
+        <div class="recipe-name">Master Riding Saddle <span style="color:#e07020;">★ All-Profession</span></div>
+        <div class="recipe-output">→ riding_saddle</div>
+        <ul class="ingredient-list">
+          <li class="cross-profession">1× Saddle Tree <span class="cross-tag">carpenter T2</span></li>
+          <li>2× Iron Stirrups</li>
+          <li>3× Heavy Leather</li>
+          <li class="cross-profession">2× Leather Conditioner <span class="cross-tag">herbalist T2</span></li>
+          <li class="cross-profession">1× Bone Handle <span class="cross-tag">tanning T2</span></li>
+        </ul>
+        <div class="skill-req">Skill: Leatherworker 4 | Time: 4min | XP: 60 | Needs: Carpenter + Blacksmith + Herbalist + Tanner</div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Cross-Profession Dependency Matrix -->
   <div class="dep-section">
     <h3>⬡ Cross-Profession Dependency Matrix</h3>
@@ -864,17 +1236,23 @@
             <th>Cooking</th>
             <th>Gunsmithing</th>
             <th>Tailoring</th>
+            <th>Carpenter</th>
+            <th>Herbalist</th>
+            <th>Leatherworker</th>
             <th>Horse Training</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Blacksmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Gunsmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Cooking</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Tanning</strong></td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Tailoring</strong></td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td></tr>
-          <tr><td><strong>Brewing</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
-          <tr><td><strong>Horse Training</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td></tr>
+          <tr><td><strong>Blacksmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Gunsmithing</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Cooking</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Tanning</strong></td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Tailoring</strong></td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Brewing</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Carpenter</strong></td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Herbalist</strong></td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td><td class="none">—</td><td class="none">—</td></tr>
+          <tr><td><strong>Leatherworker</strong></td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="dep">✓</td><td class="dep">✓</td><td class="self">self</td><td class="none">—</td></tr>
+          <tr><td><strong>Horse Training</strong></td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="dep">✓</td><td class="none">—</td><td class="dep">✓</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="self">self</td></tr>
         </tbody>
       </table>
     </div>
@@ -885,7 +1263,7 @@
 <footer>
   <a href="index.html">← Server Guide</a> &nbsp;|&nbsp;
   Rangers Bluff RP &nbsp;|&nbsp;
-  Crafting Reference v1.0 — 2026
+  Crafting Reference v1.1 — 2026-06-10 — Jolli Phase 1
 </footer>
 
 <script>
