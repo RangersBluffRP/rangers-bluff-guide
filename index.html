@@ -152,7 +152,7 @@
   <img src="images/logo.jpg" alt="Rangers Bluff RP" class="hero-logo">
   <h1>Rangers Bluff RP</h1>
   <div class="subtitle">Server Guide & Player Reference</div>
-  <div class="updated">Last updated: June 8, 2026</div>
+  <div class="updated">Last updated: June 9, 2026</div>
 </div>
 
 <nav>
@@ -163,6 +163,7 @@
   <a href="#crafting">Crafting</a>
   <a href="#butchering">Butchering</a>
   <a href="#foraging">Foraging</a>
+  <a href="#woodcutting">Woodcutting</a>
   <a href="#bounties">Bounties</a>
   <a href="#properties">Properties</a>
   <a href="#horses">Horses</a>
@@ -311,20 +312,36 @@
 
 <!-- FORAGING -->
 <h1 class="section" id="foraging">Foraging <span class="badge badge-live">LIVE</span></h1>
-<p>Thousands of plants are scattered across the frontier — berries, herbs, mushrooms, and rare botanicals. Forage nodes appear as <strong>teal blips</strong> on your minimap. Walk up to a node and hold <strong>G</strong> to gather.</p>
-<p>Not every plant is active at once. The server runs a <strong>bi-weekly rotation</strong> — roughly 10% of all nodes are live at any time, selected randomly across the map. This keeps foraging scarce and meaningful. Nodes change every two weeks.</p>
+<p>Wild plants grow throughout the frontier — berries, herbs, mushrooms, and rare botanicals. Walk up to a bush or shrub and hold <strong>G</strong> to forage. No map markers — you find plants by exploring.</p>
 
 <h2>Zones &amp; Yields</h2>
 <table>
-  <tr><th>Zone</th><th>Yield</th><th>Plants</th><th>XP</th></tr>
-  <tr><td><strong>Safe</strong></td><td>Berries (3–6), Mushrooms (2–5)</td><td>Red raspberry, blackberry, currant, huckleberry, wintergreen berry, wild mint, bulrush, thyme</td><td>1 XP</td></tr>
-  <tr><td><strong>Frontier</strong></td><td>Herbs (2–5), Berries (2–5), Mushrooms (2–5)</td><td>Oregano, yarrow, hummingbird sage, milkweed, prairie poppy, wild feverfew, bay bolete, violet snowdrop</td><td>2 XP</td></tr>
-  <tr><td><strong>Danger</strong></td><td>Rare herbs (1–3), Common herbs (3–6)</td><td>American ginseng, alaskan ginseng, burdock root, harrietum, oleander sage, vanilla flower, rams head</td><td>3 XP</td></tr>
+  <tr><th>Zone</th><th>What You Find</th><th>XP</th><th>Cooldown</th></tr>
+  <tr><td><strong>Safe</strong></td><td>Berries (2–5), Common Herbs (1–3), Mushrooms (1–3)</td><td>1 XP</td><td>5 min</td></tr>
+  <tr><td><strong>Frontier</strong></td><td>Common Herbs (2–5), Berries (2–4), Mushrooms (1–3), Rare Herbs (1)</td><td>3 XP</td><td>10 min</td></tr>
+  <tr><td><strong>Danger</strong></td><td>Rare Herbs (1–3), Common Herbs (3–6), Mushrooms (2–4)</td><td>6 XP</td><td>15 min</td></tr>
 </table>
-<div class="callout"><p><strong>~6,290 plant locations</strong> sourced from community-verified RDR2 map data. Roughly 630 nodes are active at any given time, spread across all regions from Ambarino to New Austin. Danger zone plants are in remote wilderness — expect predators.</p></div>
+<div class="callout"><p>Each bush has its own cooldown timer. Once foraged, it won't yield again for several minutes — move on and come back later. Danger zone plants are deep in the wilderness; watch for predators.</p></div>
 
-<h2>Gathering Skill</h2>
-<p>Foraging uses your <strong>Hunting skill</strong>. Higher skill levels increase yield per gather. Each gather awards XP toward your next level.</p>
+<h2>Foraging Skill</h2>
+<p>Foraging has its own dedicated skill. Each gather awards XP. Higher skill levels increase your yield — a level 5 forager collects significantly more per bush than a beginner.</p>
+
+<!-- WOODCUTTING -->
+<h1 class="section" id="woodcutting">Woodcutting <span class="badge badge-live">LIVE</span></h1>
+<p>Young trees and saplings across the frontier can be chopped for raw wood materials. You need a <strong>hatchet</strong> in your inventory. Walk up to a sapling and hold <strong>G</strong> to chop.</p>
+
+<h2>Materials</h2>
+<table>
+  <tr><th>Item</th><th>Chance</th><th>Yield</th><th>Uses</th></tr>
+  <tr><td><strong>Soft Wood</strong></td><td>60%</td><td>2–5</td><td>Fuel, basic crafting</td></tr>
+  <tr><td><strong>Sap</strong></td><td>25%</td><td>1–2</td><td>Crafting, alchemy</td></tr>
+  <tr><td><strong>Hard Wood</strong></td><td>12%</td><td>1–2</td><td>Construction, premium crafting</td></tr>
+  <tr><td><strong>Rubber</strong></td><td>3%</td><td>1</td><td>Rare crafting material</td></tr>
+</table>
+<div class="callout"><p>You get <strong>one material type per chop</strong> — drawn randomly from the table above. Each tree has a 10-minute cooldown after chopping. Move between saplings to keep a steady yield. Saplings are found throughout forested areas — maple, birch, pine, fir, lodgepole, cypress, and more depending on the region.</p></div>
+
+<h2>Woodcutting Skill</h2>
+<p>Woodcutting has its own skill that levels up with each chop. Higher skill levels increase the amount of material you collect per tree.</p>
 
 <!-- BOUNTIES -->
 <h1 class="section" id="bounties">Bounties &amp; Contracts <span class="badge badge-live">LIVE</span></h1>
@@ -578,6 +595,7 @@
   <li><strong>Horse Trainer profession gates</strong> — trainers unlock Bond Levels 4–5; certification transfers on sale</li>
   <li><strong>Player-to-Horse Bond skill</strong> — behavioral buffs: skittishness reduction, trick commands</li>
   <li><strong>Skills not yet generating XP:</strong> Mining, Farming, Hunting, Tracking, Tanning, Tailoring, Brewing, Trading</li>
+  <li><strong>Woodcutting expansion</strong> — more tree species and biomes as field research continues; larger trees planned once a reliable scan method is confirmed</li>
 </ul>
 
 <h2>Combat &amp; Conflict</h2>
@@ -608,7 +626,7 @@
 </div>
 
 <footer>
-  Rangers Bluff RP — Server documentation &nbsp;|&nbsp; Last updated June 8, 2026 &nbsp;|&nbsp; <a href="https://github.com/RangersBluffRP/rangers-bluff-guide" style="color:#8b6914;">GitHub</a>
+  Rangers Bluff RP — Server documentation &nbsp;|&nbsp; Last updated June 9, 2026 &nbsp;|&nbsp; <a href="https://github.com/RangersBluffRP/rangers-bluff-guide" style="color:#8b6914;">GitHub</a>
 </footer>
 
 </body>
