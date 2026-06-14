@@ -166,6 +166,7 @@
   <a href="#foraging">Foraging</a>
   <a href="#woodcutting">Woodcutting</a>
   <a href="#harvesting">Harvest Reference</a>
+  <a href="#farming">Farming</a>
   <a href="#bounties">Bounties</a>
   <a href="#properties">Properties</a>
   <a href="#horses">Horses</a>
@@ -437,6 +438,53 @@
   <tr><td>Woodcutting (any tree)</td><td>3 XP</td><td>Woodcutting</td></tr>
 </table>
 
+<!-- FARMING -->
+<h1 class="section" id="farming">Farming <span class="badge badge-live">LIVE</span></h1>
+<p>Work the land for yourself. Buy seeds, plant them out in open country, tend them, and harvest a crop. Farming is <strong>communal</strong> — anyone can water, fertilize, or harvest a plant, so a town can work a shared field together.</p>
+
+<h2>Planting</h2>
+<ul>
+  <li>Get seeds from the <strong>Seed Vendor</strong> in any town (a farmhand in overalls near the general store).</li>
+  <li><strong>Double-click a seed</strong> in your satchel, or use the <strong>plant command</strong> (<code>/plant potato</code>, <code>/plant corn</code>, <code>/plant wheat</code>, <code>/plant tomato</code>, <code>/plant cotton</code>).</li>
+  <li>You can only plant in <strong>open country</strong> — not inside a town. <strong>Emerald Ranch is fair game</strong> (it's a ranch, not a town).</li>
+  <li>You can tend up to <strong>20 plants</strong> at once. Harvest some to make room.</li>
+  <li>Your own plants show a blip on your map; other folks' crops do not.</li>
+</ul>
+
+<h2>Crops</h2>
+<table>
+  <tr><th>Crop</th><th>Seed (vendor price)</th><th>Farming level</th><th>Yield</th><th>Seed returned</th></tr>
+  <tr><td>Potato</td><td>Potato Seeds ($3)</td><td>1</td><td>2–4</td><td>25%</td></tr>
+  <tr><td>Corn</td><td>Corn Seeds ($3)</td><td>1</td><td>2–5</td><td>25%</td></tr>
+  <tr><td>Wheat</td><td>Wheat Seeds ($4)</td><td>2</td><td>3–6</td><td>30%</td></tr>
+  <tr><td>Tomato</td><td>Tomato Seeds ($5)</td><td>3</td><td>2–5</td><td>20%</td></tr>
+  <tr><td>Cotton</td><td>Cotton Seeds ($6)</td><td>4</td><td>3–6</td><td>20%</td></tr>
+</table>
+<p><em>Higher Farming skill lifts the un-fertilized yield toward the top of the range. A fertilized crop always harvests at the maximum.</em></p>
+
+<h2>Tending &amp; Growth</h2>
+<p>Walk up to a growing plant and hold <strong>G</strong> to tend it. Each plant accepts one watering and one fertilizing.</p>
+<table>
+  <tr><th>Action</th><th>Effect</th><th>Needs</th></tr>
+  <tr><td>Water</td><td>Cuts the remaining grow time <strong>in half</strong> (once)</td><td>A <strong>Watering Can</strong></td></tr>
+  <tr><td>Fertilize</td><td>Harvest at the <strong>top of the yield range</strong> (once)</td><td><strong>Herb Fertilizer</strong></td></tr>
+  <tr><td>Rain</td><td>Crops grow <strong>twice as fast</strong> while it's raining</td><td>The weather</td></tr>
+  <tr><td>Harvest</td><td>Reap the crop (and maybe a seed back)</td><td>Hold G on a ripe plant</td></tr>
+</table>
+
+<h2>The Watering Can</h2>
+<p>Craft a <strong>Watering Can</strong> at any <strong>blacksmith</strong> (iron ore ×3 + copper ×1). Double-click it to see how many days it has left — a can <strong>dries out and cracks apart about a week</strong> after it's forged, so don't make one until you're ready to farm.</p>
+
+<h2>Skill XP</h2>
+<table>
+  <tr><th>Action</th><th>XP</th><th>Skill</th></tr>
+  <tr><td>Plant</td><td>5 XP</td><td>Farming</td></tr>
+  <tr><td>Water</td><td>2 XP</td><td>Farming</td></tr>
+  <tr><td>Fertilize</td><td>3 XP</td><td>Farming</td></tr>
+  <tr><td>Harvest</td><td>10 XP × crop tier</td><td>Farming</td></tr>
+</table>
+<div class="callout"><p><strong>Crops feed the whole economy.</strong> Wheat and corn go to bakers and cooks; cotton becomes canvas for leatherworkers and tailors; potatoes and tomatoes fill out hearty meals. A steady farmer keeps a town fed.</p></div>
+
 <!-- BOUNTIES -->
 <h1 class="section" id="bounties">Bounties &amp; Contracts <span class="badge badge-live">LIVE</span></h1>
 <p>When a player kills another player, a kill is registered and a bounty accumulates. Kill enough people and you become <strong>Highly Dangerous</strong> — the most valuable target on the board. Names are gated behind the information broker and cost money to reveal.</p>
@@ -640,7 +688,7 @@
 <p>Out past the towns, a handful of <strong>legendary animals</strong> roam the frontier — beasts of unusual size and temper that old-timers swear by and greenhorns swear at. When one stirs, <strong>a rumor spreads in chat</strong> naming the general area it was seen. That rumor is all you get: <strong>no map markers, no waypoints</strong>. Find it the frontier way — ride out, ask around, and keep your eyes open.</p>
 <ul>
   <li><strong>At most two</strong> legendaries roam the world at any one time. Most days there are none.</li>
-  <li>Eight different beasts are known to exist: a <strong>bear, wolf, cougar, bull gator, boar, moose, and buck</strong> — and an old stag the trappers speak of only as <strong>The Counselor</strong>. Where each one dens is yours to discover.</li>
+  <li>Eight great beasts roam, each with a name the locals know: <strong>The Warden</strong> (bear), <strong>The Bytten</strong> (wolf), <strong>The Counselor</strong> (elk), <strong>The Elder</strong> (moose), <strong>Gertrude</strong> (cougar), <strong>The Sergeant</strong> (boar), <strong>Old Boggs</strong> (bull gator), and <strong>The Duke</strong> (buck). Where each one dens is yours to discover.</li>
   <li>A slain legendary's like won't be seen again for <strong>days</strong> — and never on a schedule.</li>
 </ul>
 
@@ -656,7 +704,7 @@
   <tr><td>Don't dawdle</td><td>An unskinned carcass is lost to the buzzards in about <strong>30 minutes</strong></td></tr>
   <tr><td>How</td><td>Hold <strong>G</strong> at the carcass</td></tr>
 </table>
-<p>A skinned legendary yields that beast's own <strong>named Legendary Pelt</strong> — e.g. <em>The Counselor's Legendary Pelt</em> from the Cumberland elk, or a <em>Legendary Bear's Pelt</em> — plus a generic <strong>Legendary Pelt</strong>, <strong>trophy sinew</strong>, and a <strong>claw or antler</strong> depending on the animal. The skinner earns <strong>Hunting XP</strong>; the hunter who made the kill earns <strong>Tracking XP</strong>.</p>
+<p>A skinned legendary yields that beast's own <strong>named Legendary Pelt</strong> — e.g. <em>The Counselor's Legendary Pelt</em> from the Cumberland elk, or <em>The Warden's Legendary Pelt</em> from the bear — plus a generic <strong>Legendary Pelt</strong>, <strong>trophy sinew</strong>, and a <strong>claw or antler</strong> depending on the animal. The skinner earns <strong>Hunting XP</strong>; the hunter who made the kill earns <strong>Tracking XP</strong>.</p>
 <p><strong>Each legendary's pelt is its own item</strong> — and the rarest recipes demand a <em>specific</em> beast. The <strong>Carcano Rifle</strong>, the finest rifle on the frontier, can only be crafted with <strong>The Counselor's Legendary Pelt</strong> — so a master gunsmith needs a master hunter who has tracked and felled that exact elk. The generic Legendary Pelt still feeds the "any legendary" recipes (Legendary Hide Packs, Treated Pelts). A successful hunt is worth real money — if you can get the pelt to a craftsman alive.</p>
 
 <!-- BATH HOUSES -->
