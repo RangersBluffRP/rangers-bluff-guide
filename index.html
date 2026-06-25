@@ -519,11 +519,13 @@
   <li><strong>Sheriff NPC</strong> (every active town) — Walk up, hold G for 1 second. Shows the full Wanted List with names, kill counts, and reward amounts.</li>
   <li><strong>Information Broker</strong> (marked with ? on minimap) — Walk up, hold G. Sells leads that reveal the name behind a bounty entry for a flat fee.</li>
 </ul>
+<h2>Collecting a bounty</h2>
+<p>You don't get paid for a name on a list — you get paid for <strong>bringing the body in</strong>. To collect, you must haul your mark <strong>before a town sheriff, dead or alive, and have them within 5 meters</strong> of you. Rope a live one and drag them in, or bring the corpse. When you turn them in, the law deals with them: their bounty is paid to you, their notoriety is <strong>wiped clean</strong>, and they're <strong>run out to the Annesburg jail</strong> — a long ride back from wherever you caught them. (And remember — you can't collect while <em>you're</em> wanted.)</p>
 <table>
   <tr><th>Command</th><th>Description</th></tr>
   <tr><td><code>/bountyboard</code></td><td>View all active bounties — heat level, kill count, reward — no names revealed</td></tr>
   <tr><td><code>/mybounty</code></td><td>Check if you have an active bounty on your head</td></tr>
-  <tr><td><code>/collectbounty [playerid]</code></td><td>Collect a reward after killing a wanted player</td></tr>
+  <tr><td><code>/collectbounty [playerid]</code></td><td>Turn a wanted player in for the reward — they must be within 5m of you, at a sheriff, dead or alive</td></tr>
   <tr><td><code>/placecontract [playerid] [amount]</code></td><td>Pay to put a kill contract on a specific player</td></tr>
   <tr><td><code>/opencontracts</code></td><td>List all open kill contracts available to accept</td></tr>
   <tr><td><code>/acceptcontract [contract_id]</code></td><td>Accept a kill contract and become the assigned hunter</td></tr>
@@ -901,7 +903,7 @@
   <tr><th>Command</th><th>Description</th></tr>
   <tr><td><code>/bountyboard</code></td><td>View active bounties anonymously</td></tr>
   <tr><td><code>/mybounty</code></td><td>Check if you have an active bounty</td></tr>
-  <tr><td><code>/collectbounty [playerid]</code></td><td>Collect reward after killing a wanted player</td></tr>
+  <tr><td><code>/collectbounty [playerid]</code></td><td>Turn a wanted player in at a sheriff — they must be within 5m, dead or alive</td></tr>
   <tr><td><code>/placecontract [playerid] [amount]</code></td><td>Put a kill contract on a player</td></tr>
   <tr><td><code>/opencontracts</code></td><td>List open kill contracts you can accept</td></tr>
   <tr><td><code>/acceptcontract [contract_id]</code></td><td>Accept a kill contract</td></tr>
